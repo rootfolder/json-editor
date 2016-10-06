@@ -10,9 +10,6 @@ export default Ember.Component.extend({
     const subscription = event=> {
       // Ignore messages not coming from this iframe
       if (event.source === this.get('frame') && event.data && event.data.updatedCode2) {
-        //console.log("event.data.updatedCode");
-        //console.log(event.data.updatedCode);
-        //console.log(event.data.updatedCode2);
         this.attrs.onChange(event.data.updatedCode2);
       }
     };
@@ -42,7 +39,6 @@ export default Ember.Component.extend({
               // TODO: when the code is autocompleted we don't get this even firing
               // For example type a single ', the editor will autocomplete '' we only get
               // the first ', not ''
-              var editorText = editor.getValue();
               editor.onDidChangeModelContent(function () {
                 window.top.postMessage({updatedCode: event.target.value, updatedCode2: editor.getValue()}, origin);
               });

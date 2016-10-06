@@ -18,7 +18,6 @@ module.exports = function(environment) {
       // when it is created
     },
     emberPouch: {
-      
     }
   };
 
@@ -66,8 +65,8 @@ module.exports = function(environment) {
     }
   };
 
-ENV.emberPouch.localDb = 'test';
-ENV.emberPouch.remoteDb = 'http://localhost:4984/test-database';
+  ENV.emberPouch.localDb = 'test';
+  ENV.emberPouch.remoteDb = 'http://localhost:4984/test-database';
 
   return ENV;
 };

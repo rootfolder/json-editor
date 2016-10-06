@@ -1,3 +1,6 @@
+# json-editor
+Using ember-cli, couchbase, monaco and ajv validator
+
 [![Build Status](https://travis-ci.org/MiguelMadero/ember-monaco-editor.svg?branch=master)](https://travis-ci.org/MiguelMadero/ember-monaco-editor)
 
 # Ember-monaco-editor

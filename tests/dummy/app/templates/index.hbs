@@ -1,0 +1,6 @@
+<button class="btn btn-primary" onclick={{action toast.clear}}>Clear Messages</button>
+
+<button class="btn btn-success" {{action 'saveText' model.code}}>Save JSON</button>
+
+{{monaco-editor language="json" code=model.code.data.text
+  onChange=(action "codeChanged")}}

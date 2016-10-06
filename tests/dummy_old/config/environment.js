@@ -42,29 +42,5 @@ module.exports = function(environment) {
 
   }
 
-  ENV['ember-toastr'] = {
-    injectAs: 'toast',
-    toastrOptions: {
-      closeButton: true,
-      debug: false,
-      newestOnTop: true,
-      progressBar: true,
-      positionClass: 'toast-top-right',
-      preventDuplicates: true,
-      onclick: null,
-      showDuration: '300',
-      hideDuration: '1000',
-      timeOut: '4000',
-      extendedTimeOut: '1000',
-      showEasing: 'swing',
-      hideEasing: 'linear',
-      showMethod: 'fadeIn',
-      hideMethod: 'fadeOut'
-    }
-  };
-
-  ENV.localDb = 'test';
-  ENV.remoteDb = 'http://localhost:5984/my_couch';
-
   return ENV;
 };

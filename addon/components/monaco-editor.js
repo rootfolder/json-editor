@@ -10,6 +10,7 @@ export default Ember.Component.extend({
     const subscription = event=> {
       // Ignore messages not coming from this iframe
       if (event.source === this.get('frame') && event.data && event.data.updatedCode) {
+        //console.log(event.data.updatedCode);
         this.attrs.onChange(event.data.updatedCode);
       }
     };
@@ -40,7 +41,7 @@ export default Ember.Component.extend({
               // For example type a single ', the editor will autocomplete '' we only get
               // the first ', not ''
               editor.onDidChangeModelContent(function () {
-                window.top.postMessage({updatedCode: event.target.value}, origin);
+                window.top.postMessage({updatedCode: editor.getValue()}, origin);
               });
             }
           });

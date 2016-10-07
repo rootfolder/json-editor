@@ -1,13 +1,11 @@
 import Ember from 'ember';
+import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
   model: function() {
-    const codeList = this.store.findAll('code');
-    console.log(codeList);
-    return {
-      code: "{}" 
-      //code: this.store.findRecord('code', "5")
-    };
+    return RSVP.hash({
+      code: this.store.findRecord('code', "5816E748-F6F3-C2CB-8416-A1B816C443F4")
+    });
   },
   actions:{
     saveText(jsonText){

@@ -1,6 +1,5 @@
 # json-editor
-Using ember-cli, monaco and ajv validator
-
+Using ember-cli, couchbase, monaco and ajv validator
 
 [![Build Status](https://travis-ci.org/MiguelMadero/ember-monaco-editor.svg?branch=master)](https://travis-ci.org/MiguelMadero/ember-monaco-editor)
 
@@ -43,4 +42,3 @@ It's simply VS Code. Keybindings work as well as other features. For example, cm
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
-

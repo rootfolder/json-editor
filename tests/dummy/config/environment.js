@@ -16,6 +16,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    emberPouch: {
     }
   };
 
@@ -63,8 +65,8 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.localDb = 'test';
-  ENV.remoteDb = 'http://localhost:5984/my_couch';
+  ENV.emberPouch.localDb = 'test';
+  ENV.emberPouch.remoteDb = 'http://localhost:4984/test-database';
 
   return ENV;
 };

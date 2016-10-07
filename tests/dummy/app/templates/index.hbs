@@ -2,5 +2,8 @@
 
 <button class="btn btn-success" {{action 'saveText' model.code}}>Save JSON</button>
 
-{{monaco-editor language="json" code=model.code
-  onChange=(action "codeChanged")}}
+{{monaco-editor 
+  language="json" 
+  code=model.code.data.text
+  onChange=(action "codeChanged")
+}}

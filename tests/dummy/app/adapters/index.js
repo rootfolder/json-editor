@@ -1,7 +1,9 @@
 import PouchDB from 'pouchdb';
 import { Adapter } from 'ember-pouch';
 
-var remote = new PouchDB('http://localhost:5984/my_couch');
+PouchDB.debug.enable('*');
+
+var remote = new PouchDB('http://localhost:4984/test-database');
 var db = new PouchDB('local_pouch');
 
 db.sync(remote, {
